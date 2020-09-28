@@ -56,10 +56,11 @@ def trilateratePCPFs(pCoords1,pCoords2,pCoords3,pRange1,pRange2,pRange3):
     return pCoordsLower,pCoordsUpper
 
 if len(sys.argv) < 8 or sys.argv[1] == "help":
-	print("Usage: du_trilateration_calc.py [psa] [pos#1] [rng#1] [pos#2] [rng#2] [pos#3] [rng#3]")
+	print("Usage: du_trilateration_calc.py [psa] [pos#1] [rng#1] [pos#2] [rng#2] [pos#3] [rng#3] [div]")
 	print("[psa] is Planet's Surface Area in km² (can be found via Map → Planet's Information)")
 	print("[pos] is Position that uses '::pos{system,planet,latitude,longitude,altitude}' game format")
-	print("[rng] is Range to the ore you see via scanner (range approximation depends on user's accuracy)")
+	print("[rng] is Range to the ore you see via scanner. Can be set in pixels if optional divisor parameter is added")
+	print("[div] (OPTIONAL) is divisor that tells script how much pixels in 500 meters of range in scanner's calibration mode")
 	print("Advice: if in scanner you see range and not sure if its 290 or 295 (for example), always use higher value!")
 	print("Example: 88888 ::pos{0,5,-11.1111,-11.1111,-11.1111} 111 ::pos{0,5,-22.2222,-22.2222,-22.2222} 222 ::pos{0,5,-33.3333,-33.3333,-33.3333} 333")
 	sys.exit()
@@ -67,7 +68,7 @@ if len(sys.argv) < 8 or sys.argv[1] == "help":
 pRadius = sqrt(((float(sys.argv[1])/4)/pi))
 
 print("##################################################")
-print("## Dual Universe Trilateration Calculator v1.17 ##")
+print("## Dual Universe Trilateration Calculator v1.19 ##")
 print("##################################################")
 print("Planet's radius is " + str("%.1f" % pRadius) + " km")
 
@@ -77,6 +78,12 @@ xPos3 = str(sys.argv[6]).replace("::pos{","").replace("}","")
 xRange1 = float(sys.argv[3]) / 1000
 xRange2 = float(sys.argv[5]) / 1000
 xRange3 = float(sys.argv[7]) / 1000
+
+if len(sys.argv) > 8:
+	xDivisor = float(sys.argv[8])
+	xRange1 = xRange1 * 500 / xDivisor
+	xRange2 = xRange2 * 500 / xDivisor
+	xRange3 = xRange3 * 500 / xDivisor
 
 xSystem, xPlanet, xLat1, xLon1, xAlt1 = xPos1.split(',')
 _, _, xLat2, xLon2, xAlt2 = xPos2.split(',')
