@@ -60,7 +60,7 @@ if len(sys.argv) < 8 or sys.argv[1] == "help":
 	print("[psa] is Planet's Surface Area in km² (can be found via Map → Planet's Information)")
 	print("[pos] is Position that uses '::pos{system,planet,latitude,longitude,altitude}' game format")
 	print("[rng] is Range to the ore you see via scanner. Can be set in pixels if optional divisor parameter is added")
-	print("[div] (OPTIONAL) is divisor that tells script how much pixels in 500 meters of range in scanner's calibration mode")
+	print("[div] optional parameter that tells script how much pixels in 500 meters of range in scanner's calibration mode")
 	print("Advice: if in scanner you see range and not sure if its 290 or 295 (for example), always use higher value!")
 	print("Example: 88888 ::pos{0,5,-11.1111,-11.1111,-11.1111} 111 ::pos{0,5,-22.2222,-22.2222,-22.2222} 222 ::pos{0,5,-33.3333,-33.3333,-33.3333} 333")
 	sys.exit()
@@ -68,7 +68,7 @@ if len(sys.argv) < 8 or sys.argv[1] == "help":
 pRadius = sqrt(((float(sys.argv[1])/4)/pi))
 
 print("##################################################")
-print("## Dual Universe Trilateration Calculator v1.19 ##")
+print("## Dual Universe Trilateration Calculator v1.20 ##")
 print("##################################################")
 print("Planet's radius is " + str("%.1f" % pRadius) + " km")
 
