@@ -2,7 +2,7 @@ Have a hard time finding your T3/T4/T5 ore vein? Wandering around with no result
 
 ## Requirements
 1) Download & Install Python 3.8: https://www.python.org/downloads/
-2) Install "numpy" module via CLI: pip install numpy (by default pip is located in Python\Scripts\ folder).
+2) Install "numpy" module via CLI: `pip install numpy` (by default pip is located in Python\Scripts\ folder).
 
 ## How to Use
 1) Surface area of planet you're currently on:<br>
