@@ -1,6 +1,6 @@
 Have a hard time finding your T3/T4/T5 ore vein? Wandering around with no results and it doesn't seem like will getting closer to it anytime soon? Well, this trilateriation calc might help you, if you use it right.
 
-## Requirments
+## Requirements
 1) Download & Install Python 3.8: https://www.python.org/downloads/
 2) Install "numpy" module via CLI: pip install numpy (by default pip is located in Python\Scripts\ folder).
 
