@@ -18,7 +18,7 @@ Have a hard time finding your T3/T4/T5 ore vein? Wandering around with no result
 7) Lack of precision will result in completely wrong results. Correct results with low precision might bring you somewhere within 50~100 meters of ore vein.
 
 ## Maximum Precision Guide
-1) To get maximum prcise ore vein's coordinates you'll need to measure coordinates very carefully.
+1) To get maximum precise ore vein's coordinates you'll need to measure coordinates very carefully.
 2) Walk slowly until your next scan ping.
 3) When scan ping happen, ensure that your character is no longer moving. 
 4) If your character is sliding or falling even from 1cm of height - repeat attempt.
