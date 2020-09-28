@@ -23,13 +23,12 @@ Have a hard time finding your T3/T4/T5 ore vein? Wandering around with no result
 3) When scan ping happen, ensure that your character is no longer moving. 
 4) If your character is sliding or falling even from 1cm of height - repeat attempt.
 5) After success, copy coordinates at exactly this spot.
-6) Open your scanner in calibration mode and measure pixels from upper to bottom line like this (for me it was 574):<br>
+6) Open your scanner in calibration mode and measure pixels from upper to bottom line like this (for me it was 574), it will be your divisor parameter:<br>
 ![](https://i.imgur.com/qR27q8V.png)
-7) While in scanner's calibration mode, measure exact amount of pixels from bottom line to range identifier (lets take 119 for example):<br>
+7) While in scanner's calibration mode, measure exact amount of pixels from bottom line to the range identifier (119 on the screenshot in my case):<br>
 ![](https://i.imgur.com/ADJebV0.png)
-8) Get range in meters: 119 * 500 / 574 = ~103.65854 (500, because 500 meters is scanner's upper limit range).
-9) Follow instruction to get precise coordinates and range for two other points.
-10) With all these coordinates input should look like this:<br>
-`du_trilateration_calc.py 88888.88 ::pos{0,5,-11.1111,-11.1111,-11.1111} 111.11111 ::pos{0,5,-22.2222,-22.2222,-22.2222} 222.22222 ::pos{0,5,-33.3333,-33.3333,-33.3333} 333.33333`
-11) Usulay it brings me within 10~30 meters of ore vein and I only have to search for correct location with direction detector, which is piece of cake.
-12) Do remember that scanner shows range to the closest ore voxel in ore vein, not to the ore vein's center, thus do not expect it to bring you to the ore vein directly, unless you were extremely lucky and scanner was hooked to the same ore voxel in the ore vein all the time.
+8) Follow instruction to get precise coordinates and range for two other points.
+9) With all these coordinates input should look like this (with divisor parameter at the very end):<br>
+`du_trilateration_calc.py 88888.88 ::pos{0,5,-11.1111,-11.1111,-11.1111} 111 ::pos{0,5,-22.2222,-22.2222,-22.2222} 222 ::pos{0,5,-33.3333,-33.3333,-33.3333} 333 777`
+10) Usulay it brings me within 10~30 meters of ore vein and I only have to search for correct location with direction detector, which is piece of cake.
+11) Do remember that scanner shows range to the closest ore voxel in ore vein, not to the ore vein's center, thus do not expect it to bring you to the ore vein directly, unless you were extremely lucky and scanner was hooked to the same ore voxel in the ore vein all the time.
