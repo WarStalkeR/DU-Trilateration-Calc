@@ -1,4 +1,4 @@
-Have a hard time finding your T3/T4/T5 ore vein? Wandering around with no results and it doesn't seem like you'll get closer to it anytime soon? Well, this trilateriation calc might help you, if you use it right.
+This trilateriation calculator is quite old and outside the game (compared to all Progamming Board-based LUA-implemented ore scanners), and requires installation of external libraries such as python. So my advice is to go here https://github.com/juvenius/du_ez_scanner and grab this in-game Progamming Board-based LUA-implemented EZ ore scanner. In addition, instead of 3-point trilateriation, as all other trilateriation calculators use, EZ scanner uses **4-point trilateriation** that returns you a perfect set of coordinates. I'm leaving my original script here just in case somebody wants it for something.
 
 ## Requirements
 1) Download & Install Python 3.8: https://www.python.org/downloads/
